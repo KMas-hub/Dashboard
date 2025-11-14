@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ダッシュボード</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!--ヘッダー-->
+        <header class="header">
+            <div class="header-left">
+                <a href="/">
+                    <img src="logo.png" alt="Kawahara'sFarm ロゴ" class="logo">
+                </a>
+            </div>
+            <div class="header-right">
+                <h1>現在時刻　</h1>
+            </div>
+            <!--現在時刻の呼び出し-->
+            <div id="clock" class="clock"></div>
+        </header>
+
+        <!--メイン-->
+        <main class="dashboard">
+
+            <!-- 外側センサー -->
+            <section class="card out">
+                <h2>Out side</h2>
+                <ul>
+                    <li><span class="label uv">UV</span> <span id="out_uv">--</span></li>
+                    <li><span class="label vl">VL</span> <span id="out_vl">--</span></li>
+                    <li><span class="label ir">IR</span> <span id="out_ir">--</span></li>
+                    <li><span class="label tmp">気温</span> <span id="out_temp">--</span></li>
+                    <li><span class="label humid">湿度</span> <span id="out_humid">--</span></li>
+                </ul>
+            </section>
+
+            <!--中央-->
+            <div class="middle">
+                <!-- 内側センサー -->
+                <section class="card in">
+                    <h2>In side</h2>
+                    <ul><li>温度: -- </li></ul>
+                </section>
+
+                <!--Tank A-->
+                <section class="card tankA">
+                    <h2>Tank A</h2>
+                    <ul><li>温度: <span id="tankA_temp">--</span></li></ul>
+                </section>
+
+                <!--Tank B-->
+                <section class="card tankB">
+                    <h2>Tank B</h2>
+                    <ul><li>温度: <span id="tankB_temp">--</span></li></ul>
+                </section>
+            </div>
+            
+            <!-- ハウス10 -->
+            <section class="card house10">
+                <h2>House10</h2>
+                <div class="zones">
+                    <div class="zone west">
+                        <h3>西側</h3>
+                        <ul>
+                            <li>温度: <span id="temp10w">--</span></li>
+                            <li>湿度: <span id="humid10w">--</span></li>
+                            <li>地温: <span id="soil10w">--</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="zone north">
+                        <h3>北側</h3>
+                        <ul>
+                            <li>UV: <span id="house10_uv">--</span></li>
+                            <li>VL: <span id="house10_vl">--</span></li>
+                            <li>IR: <span id="house10_ir">--</span></li>
+                            <li>地温: <span id="soil10n">--</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="zone south">
+                        <h3>南側</h3>
+                        <ul>
+                            <li>土壌水分: <span id="mois10s">--</span></li>
+                            <li>地温: <span id="soil10s">--</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="zone east">
+                        <h3>東側</h3>
+                        <ul>
+                            <li>温度: <span id="temp10e">--</span></li>
+                            <li>湿度: <span id="humid10e">--</span></li>
+                            <li>地温: <span id="soil10e">--</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ハウス群 -->
+            <div class="houses">
+                <section class="card">
+                    <h2>House1</h2>
+                    <ul>
+                        <li>気温: <span id="temp1n">--</span></li>
+                        <li>湿度: <span id="humid1n">--</span></li>
+                        <li>地温: <span id="soil1n">--</span></li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>House2</h2>
+                    <ul>
+                        <li>気温: <span id="temp2n">--</span></li>
+                        <li>湿度: <span id="humid2n">--</span></li>
+                        <li>地温: <span id="soil2n">--</span></li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>House3</h2>
+                    <ul>
+                        <li>気温: <span id="temp3n">--</span></li>
+                        <li>湿度: <span id="humid3n">--</span></li>
+                        <li>地温: <span id="soil3n">--</span></li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>House4</h2>
+                    <ul>
+                        <li>気温: <span id="temp4n">--</span></li>
+                        <li>湿度: <span id="humid4n">--</span></li>
+                        <li>地温: <span id="soil4n">--</span></li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>House5</h2>
+                    <ul>
+                        <li>気温: <span id="temp5n">--</span></li>
+                        <li>湿度: <span id="humid5n">--</span></li>
+                        <li>地温: <span id="soil5n">--</span></li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>House6</h2>
+                    <ul>
+                        <li>気温: <span id="temp6n">--</span></li>
+                        <li>湿度: <span id="humid6n">--</span></li>
+                        <li>地温: <span id="soil6n">--</span></li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>House7</h2>
+                    <ul>
+                        <li>気温: <span id="temp7n">--</span></li>
+                        <li>湿度: <span id="humid7n">--</span></li>
+                        <li>地温: <span id="soil7n">--</span></li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>House8</h2>
+                    <ul>
+                        <li>気温: <span id="temp8n">--</span></li>
+                        <li>湿度: <span id="humid8n">--</span></li>
+                        <li>地温: <span id="soil8n">--</span></li>
+                    </ul>
+                </section>
+
+                <section class="card">
+                    <h2>House9</h2>
+                    <ul>
+                        <li>気温: <span id="temp9n">--</span></li>
+                        <li>湿度: <span id="humid9n">--</span></li>
+                        <li>地温: <span id="soil9n">--</span></li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

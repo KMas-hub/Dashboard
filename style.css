@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Miryo UI";
+  margin: 0;
+  background: #002060;
+  overflow-x: hidden; /* 横スクロール無効 */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #002060;
+  color: #E6E6E6;
+  padding: 1em;
+  z-index: 1000;
+  /* box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5); */
+
+  display: flex;
+  justify-content: space-between; /* 左右に分ける */
+  align-items: center;            /* 上下中央揃え */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  margin-left: auto; /* ← これで右端へ移動 */
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0.025em;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.header nav a {
+    color: #E6E6E6;
+    text-decoration: none;
+}
+
+.logo {
+    height: 50px;      /* ロゴ画像の高さを調整 */
+    width: auto;       /* 幅は自動で比率を保つ */
+}
+
+
+
+main {
+    margin-top: 120px; /* ヘッダーの高さに応じて調整 */
+    color: #E6E6E6;
+}
+
+.content {
+    padding: 2em;
+}
+
+/*現在時刻*/
+#clock {
+    font-size: 2em;
+    font-family: "Miryo UI";
+    white-space: nowrap;
+}
+
+
+/*メイン*/
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+ul, ol {
+  list-style-type: none; /* マーカー（・）を消す */
+  padding-left: 0;       /* 左の余白も削除 */
+  margin-left: 0;        /* ブラウザによるデフォルト余白も消す */
+}
+
+/* 共通カードスタイル */
+.card {
+  border: 1px solid #E6E6E6;
+  background: #002060;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  min-width: 120px;
+  flex: 1;
+}
+
+.card h2 {
+  background: #E6E6E6;
+  color: #002060;
+  font-size: 1rem;
+  padding: 0.3rem;
+  margin: -0.5rem -1rem 0.5rem -1rem;
+}
+
+/*Out sideセンサ*/
+.card.out {
+  flex: 0.5;
+}
+
+/*中央*/
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 0.2;
+}
+
+.house10 {
+  height: auto; /* 高さは内容に応じて自動に */ 
+}
+
+.zones {
+  display: flex;
+  justify-content: space-around; /* 等間隔に配置 */
+  align-items: flex-start;       /* 上揃え */
+  gap: 1rem;                     /* 各zoneの間隔 */
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+}
+
+/* zone共通 */
+.zone {
+  flex: 1 1 200px;  /* 横幅は最小200pxで伸縮可能 */
+  max-width: 250px; /* 最大幅を制御したい場合 */
+  padding: 0.5rem 1rem;
+}
+
+/* House 群は横並び */
+.houses {
+  display: flex;
+  flex-wrap: nowrap;
+  /* font-size: 18px; */
+  gap: 0.5rem;
+  width: 100%;
+}
+
+/* 背景色 */
+.level-Slow {
+  background: linear-gradient(to right, #002060, blue);
+  padding: 0 0.3em;
+  border-radius: 3px;
+}
+
+.level-midlow {
+  background: linear-gradient(to right, #002060, #32f8fd);
+  padding: 0 0.3em;
+  border-radius: 3px;
+}
+
+.level-low {
+  background: linear-gradient(to right, #002060, green);
+  padding: 0 0.3em;
+  border-radius: 3px;
+}
+
+.level-mid {
+  background: linear-gradient(to right, #002060, yellow);
+  padding: 0 0.3em;
+  border-radius: 3px;
+}
+
+.level-high {
+  background: linear-gradient(to right, #002060, red);
+  padding: 0 0.3em;
+  border-radius: 3px;
+}
+
+/* 色ラベル */
+.label {
+  display: inline-block;
+  min-width: 2em;
+  font-weight: bold;
+}
+.label.uv { color: orange; }
+.label.vl { color: blue; }
+.label.ir { color: red; }
+.label.tmp { color: red;}
+.label.humid { color: blue; }
