@@ -64,14 +64,14 @@ body {
     margin-top: 16px;
     font-size: 24px;
     background-color: #002060; /* 好きな色に変更可能 */
-    color: #e6e6e6;
+    color: #E6E6E6;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
 }
 
 .external-button:hover {
-    background-color: #e6e6e6;
+    background-color: #E6E6E6;
     color: #002060;
 }
 
@@ -209,3 +209,4 @@ ul, ol {
 .label.ir { color: red; }
 .label.tmp { color: red;}
 .label.humid { color: blue; }
+
